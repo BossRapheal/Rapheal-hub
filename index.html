@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> Vtu Dashboard</title>
+  </head>
+  <style>
+ .dark{
+ padding: 20px;
+ font-size: 15px; 
+ border-radius: 15px;
+ padding: 10px 0;
+ padding-left: 20px;
+ padding-right: 20px;
+ background-color: white;
+ box-shadow: 0 0 5px grey;
+ margin-top: 10px;
+}
+ .dark h3{
+     font-size:;
+     color: darkblue;
+                 }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background   : border-radius: 15px 0 0 15px;
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 0 15px 15px 0;
+  }
+
+   img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid blue;
+  }
+
+  .welcome-text {
+    font-size: 15px;
+    color: darkred;
+  }
+  
+  
+
+header .icon {
+        padding: 5px;
+        font-size: 28px;
+        color: skyblue;
+      }
+      
+  
+</style>
+
+<header>
+  <div class="left-section">
+    <img src="profile-icon.png" alt="Profile Icon">
+    <strong>Welcome, <span id="welcome-username"></strong>
+  </div>
+ <div id="notificationIcon" class="notification-icon">
+                <i class="fa fa-bell icon"></i>
+                <a id="logout" href="#">
+                 <i class="fa fa-power-off icon"></i></a>
+</header>
+        
+        <div class="dark">
+		             <h3>Balance</h3>
+		      <h4>₦872,000</h4>
+		      <h6> </h6>
+     </div>
+     
+     
+     <script>
+// Logout functionality
+document.getElementById("logout").addEventListener("click", function() {
+// Replace with your logout logic (e.g., redirect to login page)
+alert("Logged out successfully!");
+ window.location.href = "login.html";
+});
+</script>
+     
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Notification icon click event
+        document.getElementById("notificationIcon").addEventListener("click", function() {
+            Swal.fire({
+                title: 'No new notifications',
+                icon: 'info',
+                confirmButtonText: 'OK'
+            });
+        });
+
+       </script>
+
+
+     
+     
+     
+     
+     
