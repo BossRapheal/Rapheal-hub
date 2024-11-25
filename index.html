@@ -593,5 +593,31 @@ function closeNav() {
 }
 
   </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    // When the contact link is clicked
+    document.getElementById("contact-link").addEventListener("click", function(e) {
+        e.preventDefault();  // Prevent the default action (scroll to footer)
+
+        // Trigger SweetAlert2 modal with two buttons
+        Swal.fire({
+            title: 'Contact Us',
+            text: 'Would you like to chat with the Admin?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Chat with Admin',
+            cancelButtonText: 'Cancel',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Action when "Chat with Admin" is clicked
+                Swal.fire('Connecting...', 'You are now chatting with the Admin.', 'success');
+            } else if (result.isDismissed) {
+                // Action when "Cancel" is clicked
+                Swal.fire('Cancelled', 'You have cancelled the chat request.', 'info');
+            }
+        });
+    });
+</script>
   
   
