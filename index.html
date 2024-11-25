@@ -465,31 +465,8 @@ body {
 
 
 
-}
 
-@media only screen and (max-width: 768px) {
-.popup-content {
-width: 90%;
-}
-.popup-buttons {
-flex-direction: column;
-}
-.close-popup, .join-channel {
-flex-basis: 100%;
-margin-bottom: 10px;
-}
-}
-</style>
 
-<script>
-setTimeout(function() {
-document.getElementById('popup').style.display = 'block';
-}, 5000);
-
-document.querySelector('.close-popup').addEventListener('click', function() {
-document.getElementById('popup').style.display = 'none';
-});
-</script>
     <div class="blog-post" id="blog">
         <!-- Post Header with Author and Time -->
         <div class="post-header">
@@ -662,4 +639,12 @@ function closeNav() {
       }
     });
   });
+</script>
+setTimeout(function() {
+document.getElementById('popup').style.display = 'block';
+}, 5000);
+
+document.querySelector('.close-popup').addEventListener('click', function() {
+document.getElementById('popup').style.display = 'none';
+});
 </script>
